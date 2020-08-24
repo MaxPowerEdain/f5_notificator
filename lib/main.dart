@@ -47,13 +47,13 @@ class _HomePageScaffoldState extends State<HomePageScaffold> {
   Future<void> setUsername(String username) async {
     final prefs = await SharedPreferences.getInstance();
     prefs.setString("username", username);
-    log(username + " saved as username");
+    //log(username + " saved as username");
   }
 
   Future<String> getUsername() async {
     final prefs = await SharedPreferences.getInstance();
     String username = prefs.getString("username") ?? null;
-    log(username + " is the saved username");
+    //log(username + " is the saved username");
 
     return username;
   }
@@ -160,16 +160,22 @@ class _HomePageScaffoldState extends State<HomePageScaffold> {
   @override
   void initState() {
     super.initState();
-    if (getUsername() == null) {
-      WidgetsBinding.instance
-          .addPostFrameCallback((_) => showInitialUserDialog(context));
-    }
-
+    log("executing initState usernameCheck");
+    getUsername().then((savedUsername){
+      if(savedUsername == null) {
+        log("savedUsername is null");
+        WidgetsBinding.instance
+            .addPostFrameCallback((_) => showInitialUserDialog(context));
+      }
+      else{
+        log("savedUsername is: " + savedUsername);
+      }
+    });
   }
+
 
   @override
   Widget build(BuildContext context) {
-
 
     return Scaffold(
       backgroundColor: backgroundPriorityColor,
