@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "512022703812",
+    "firebase_url": "https://f5-notifyer.firebaseio.com",
+    "project_id": "f5-notifyer",
+    "storage_bucket": "f5-notifyer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512022703812:android:3ec9e624eefc8ed1fae391",
+        "android_client_info": {
+          "package_name": "factoriaf5.f5_notificator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "512022703812-0qj4l433en9iqk9d1v90h1sos679chlv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvLHhiEmJ6-yqg-2L3kHnps3dOmJr31es"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "512022703812-0qj4l433en9iqk9d1v90h1sos679chlv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
